@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Event Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onscroll="trackScrollPosition()">
+    <h1>Interactive Event Tracker</h1>
+
+    <!-- Click Event -->
+    <section class="event-section">
+        <h2>Click Tracker</h2>
+        <div id="clickCounter" class="counter">0</div>
+        <button id="clickMeButton" onclick="incrementClick()">Click Me!</button>
+        <button onclick="resetClickCounter()">Start again</button>
+    </section>
+
+    <!-- Mouse Move Event -->
+    <section class="event-section">
+        <h2>Mouse Movement Tracker</h2>
+        <div id="hoverArea" class="hover-area">Hover over me!</div>
+        <div id="mouseCoords"></div>
+    </section>
+
+    <!-- Keyboard Event -->
+    <section class="event-section">
+        <h2>Keyboard Input Tracker</h2>
+        <input type="text" id="keyboardInput" onkeydown="showLastKey(event)" placeholder="Type something...">
+
+        <div id="keyStatus"></div>
+        <button onclick="clearKeyboardInput()">Clear</button>
+    </section>
+
+    <!-- Focus and Blur Event -->
+    <section class="event-section">
+        <h2>Focus and Blur Tracker</h2>
+        <input type="text" id="focusInput" onfocus="updateFocus('Focused')" onblur="updateFocus('Unfocused')" placeholder="Focus and blur here">
+        <div id="focusMessage">Input is not focused</div>
+    </section>
+
+    <!-- Window Resize Event -->
+    <section class="event-section">
+        <h2>Window Resize Tracker</h2>
+        <div id="resizeInfo">Window size: Width: ${window.innerWidth}, Height: ${window.innerHeight}</div>
+    </section>
+
+    <!-- Touch Event -->
+    <section class="event-section">
+        <h2>Touch Event Tracker</h2>
+        <div id="touchOutput">Touch position: None</div>
+    </section>
+
+    <!-- Form Submission Event -->
+    <section class="event-section">
+        <h2>Form Submission Tracker</h2>
+        <form id="submissionForm" onsubmit="submitForm(event)">
+            <input type="text" id="formField" placeholder="Enter something..." required>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+        <div id="submissionStatus">Submission Status: Not Submitted</div>
+    </section>
+
+    <!-- Drag and Drop Event -->
+    <section class="event-section">
+        <h2>Drag and Drop Tracker</h2>
+        <div id="draggableItem" draggable="true" ondragstart="startDrag()" ondragend="endDrag()">Drag Me!</div>
+        <div id="dragStatus">Drag Status: Not Dragging</div>
+    </section>
+
+    <section class="event-section">
+        <h2>Media Playback Tracker</h2>
+        <video id="videoPlayer" width="400" controls>
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+        </video>
+        <div id="mediaStatus">Media Status: Stopped</div>
+    </section>
+    
+
+
+<!-- Image Hover Event -->
+ <section class="event-section">
+    <h2>Image Hover Tracker</h2>
+    <div class="image-hover-container">
+        <img id="hoverImage" src="img1.webp" alt="Hover over me!">
+    </div>
+</section>
+
+
+    <!-- Double Click Event -->
+    <section class="event-section">
+        <h2>Double Click Tracker</h2>
+        <button id="doubleClickBtn" ondblclick="alert('Double Click Detected!')">Double Click Me</button>
+    </section>
+
+    <!-- Scroll Event -->
+    <section class="event-section">
+        <h2>Scroll Position Tracker</h2>
+        <div id="scrollTracker">Scroll Position: 0</div>
+    </section>
+
+    <!-- Paste Event -->
+    <section class="event-section">
+        <h2>Paste Tracker</h2>
+        <input type="text" id="pasteInput" placeholder="Paste here.." onpaste="handlePaste(event)">
+        <button onclick="clearPasteInput()">Clear</button>
+        <div id="pasteOutput">Pasted text will appear here.</div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

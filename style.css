@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(255, 204, 204, 0.8), rgba(204, 255, 204, 0.8));
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4A0072;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.event-section {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    transition: transform 0.2s; 
+}
+
+.event-section:hover {
+    transform: translateY(-5px); 
+}
+
+h2 {
+    color: #8A2BE2;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; 
+}
+
+.counter {
+    font-size: 48px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #FFB6C1;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 24px;
+    background: #8A2BE2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s; 
+}
+
+button:hover {
+    background: #DA70D6;
+    transform: scale(1.05); 
+}
+
+.hover-area {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB6C1;
+    color: #fff;
+    margin: auto;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 0.6rem;
+}
+
+#mouseCoords, #keyStatus, #focusMessage, #resizeInfo, #touchOutput, #submissionStatus, #dragStatus, #mediaStatus, #pasteOutput {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #4A0072;
+}
+
+#draggableItem {
+    width: 100px;
+    height: 100px;
+    background-color: #FFB6C1;
+    border: 2px solid #8A2BE2;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#videoPlayer {
+    margin-top: 0.8rem;
+}
+
+.image-hover-container {
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+#hoverImage {
+    width: 5rem;
+    margin-top: 1rem;
+    transition: transform 0.3s;
+}
+
+.image-hover-container:hover #hoverImage {
+    transform: scale(1.1);
+}
+
+input[type="text"], form input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #8A2BE2;
+    border-radius: 5px;
+    font-size: 18px; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s;
+}
